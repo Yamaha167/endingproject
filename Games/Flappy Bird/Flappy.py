@@ -1,21 +1,18 @@
 import pygame
 from pygame.locals import *
 import random
+import asyncio
 
 pygame.init()
 
 clock = pygame.time.Clock()
 fps = 60
-
 screen_width = 864
 screen_height = 936 #1024
-
 screen = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption('Flappy Fly')
-
 #define font
 font = pygame.font.SysFont('Pixel', 60)
-
 #define colors
 white = (255, 255, 255)
 
