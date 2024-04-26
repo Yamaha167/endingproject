@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <h1>Live GameKata Catalogue Statistics!</h1>
+  <p>Currently, the project contains:</p>
+  <ul>
+    <li><strong>Uploaded Games:</strong> {{ num_games }}</li>
+    <li><strong>Registered Users:</strong> {{ num_users }}</li>
+  </ul>
+{% endblock %}

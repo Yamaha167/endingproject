@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>GameKata</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    .sidenav {
+      height: 100%;
+      width: 200px; /* Fixed width */
+      position: fixed; /* Fixed position */
+      padding-top: 20px;
+      background-color: #f1f1f1;
+    }
+    .left-sidenav { left: 0; }
+    .right-sidenav { right: 0; }
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+    @media (min-width: 768px) {
+      .main {
+        margin-left: 200px; /* Space for left sidebar */
+        margin-right: 200px; /* Space for right sidebar */
+      }
+    }
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        position: relative;
+        height: auto;
+        width: 100%;
+        padding: 15px;
+      }
+      .main {
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{% url 'welcome' %}">GameKata</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="{% url 'welcome' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About/Stats</a></li>
+        <li><a href="{% url 'games' %}">Games</a></li>
+        <li><a href="{% url 'tutorial' %}">Tutorial</a></li>
+        <li><a href="{% url 'file_upload' %}">Upload</a></li>
+      </ul>
+      {% if user.is_authenticated %}
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item"><a class="nav-link" href="{% url 'profilis' %}">
+            <svg class="bi bi-person" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M13 14s1 0 1-1-1-4-6-4-6 3-6 4 1 1 1 1h10zm-9.995-.944v-.002.002zM3.022 13h9.956a.274.274 0 00.014-.002l.008-.002c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664a1.05 1.05 0 00.022.004zm9.974.056v-.002.002zM8 7a2 2 0 100-4 2 2 0 000 4zm3-2a3 3 0 11-6 0 3 3 0 016 0z" clip-rule="evenodd"/>
+            </svg>
+            You are logged in as {{ user.get_username }}</a></li>
+          <li class="nav-item">
+            <form class="navbar-form" method="post" action="{% url 'logout' %}?next=/">
+              {% csrf_token %}
+              <button type="submit" class="btn btn-outline-secondary">Logout</button>
+            </form>
+          </li>
+        </ul>
+      {% else %}
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item"><a class="nav-link" href="{% url 'login'%}">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'register'%}">Register</a></li>
+        </ul>
+      {% endif %}
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-2 sidenav left-sidenav">
+      <!-- Left sidebar can contain additional navigation or context information -->
+    </div>
+    <div class="col-sm-8 col-sm-offset-2 main">
+      {% block content %}
+      <!-- Main content goes here -->
+      {% endblock %}
+    </div>
+    <div class="col-sm-2 sidenav right-sidenav">
+      <p><a href="{% url 'flappy_game' %}">Flappy Fly</a></p>
+      <p><a href="#">Home Invaderz</a></p>
+      <p><a href="#">Hssss</a></p>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+
+</body>
+</html>

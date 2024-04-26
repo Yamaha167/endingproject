@@ -5,24 +5,74 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4eda8b73-7ddc-4c29-b809-a9dec208daa2" name="Changes" comment="Flappy Fly">
-      <change afterPath="$PROJECT_DIR$/Games/Flappy_fly/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gamesite/my_game_website/Gaming/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gamesite/my_game_website/Gaming/media/profile_pics/Wormis.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gamesite/my_game_website/Gaming/static/profile_pics/default.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gamesite/my_game_website/Gaming/static/web/Flappy_fly/fly_thumbnail.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gamesite/my_game_website/Gaming/templates/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gamesite/my_game_website/Gaming/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gamesite/my_game_website/Gaming/templates/file_upload_success.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gamesite/my_game_website/Gaming/templates/flappy_game.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gamesite/my_game_website/Gaming/templates/games.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gamesite/my_game_website/Gaming/templates/profilis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gamesite/my_game_website/Gaming/templates/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gamesite/my_game_website/Gaming/templates/tutorial.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gamesite/my_game_website/Gaming/templates/upload_file.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gamesite/my_game_website/media/profile_pics/default.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gamesite/my_game_website/media/profile_pics/default_game.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Games/Flappy Bird/Flappy.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Games/Flappy Bird/img/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/Flappy_fly/img/5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Games/Flappy Bird/img/Background.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/Flappy_fly/img/Background.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Games/Flappy Bird/img/Exit.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/Flappy_fly/img/Exit.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Games/Flappy Bird/img/Restart.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/Flappy_fly/img/Restart.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Games/Flappy Bird/img/Trap.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/Flappy_fly/img/Trap.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Games/Flappy Bird/img/fli1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/Flappy_fly/img/fli1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Games/Flappy Bird/img/fli2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/Flappy_fly/img/fli2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Games/Flappy Bird/img/fli3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/Flappy_fly/img/fli3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Games/Flappy Bird/img/floppyground.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/Flappy_fly/img/floppyground.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Games/Flappy Bird/img/start.png" beforeDir="false" afterPath="$PROJECT_DIR$/Games/Flappy_fly/img/start.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/Ftws.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesite/my_game_website/Gaming/static/web/Flappy_fly/Ftws.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/build/version.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/build/web-cache/19cba7c472c00dc4b6be4f7314a04410.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/build/web-cache/19cba7c472c00dc4b6be4f7314a04410.head" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/build/web-cache/1b15e19d796839ac93068711d32c2557.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/build/web-cache/1b15e19d796839ac93068711d32c2557.head" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/build/web-cache/38e02d124325c756243ee99a92e528ed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/build/web-cache/427729db96c74210a6daf50f46f68e14.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/build/web-cache/427729db96c74210a6daf50f46f68e14.head" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/build/web-cache/43a138bdf7507cad77eb1201a9b99081.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/build/web-cache/43a138bdf7507cad77eb1201a9b99081.head" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/build/web-cache/489f66f53e526d7110d2d34527229eca.tmpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/build/web-cache/7ba5f9b81eefd22864d4f269f6440302.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/build/web-cache/7ba5f9b81eefd22864d4f269f6440302.head" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/build/web-cache/8e0c8197f178117b91e8dc55d7eee0db.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/build/web-cache/8e0c8197f178117b91e8dc55d7eee0db.head" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/build/web-cache/8e7732e36d74b6ca66d825cd22d53b85.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/build/web-cache/8e7732e36d74b6ca66d825cd22d53b85.head" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/build/web-cache/a954d0fa88d49b578037b7e007cf3dc2.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/build/web-cache/a954d0fa88d49b578037b7e007cf3dc2.head" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/build/web-cache/b0023fe2aacd2375a846b7629ddaab1c.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/build/web-cache/b0023fe2aacd2375a846b7629ddaab1c.head" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/build/web-cache/da83f20a925311df5be3721e12eb180b.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/build/web-cache/da83f20a925311df5be3721e12eb180b.head" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/build/web-cache/e81b92874f189a8c7136315a0e88ab5a.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/build/web-cache/e81b92874f189a8c7136315a0e88ab5a.head" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/build/web-cache/ee25ea4dcef639025200b5bea19f91dd.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/build/web-cache/ee25ea4dcef639025200b5bea19f91dd.head" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/build/web-cache/ffe5224cce19ab35b45c00567061a73a.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/build/web-cache/ffe5224cce19ab35b45c00567061a73a.head" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/build/web/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesite/my_game_website/Gaming/static/web/Flappy_fly/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/build/web/flappy_fly.apk" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesite/my_game_website/Gaming/static/web/Flappy_fly/flappy_fly.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/build/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesite/my_game_website/Gaming/static/web/Flappy_fly/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/img/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/img/Background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/img/Exit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/img/Restart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/img/Trap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/img/fli1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/img/fli2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/img/fli3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/img/floppyground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/img/start.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Games/Flappy_fly/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gamesite/my_game_website/Gaming/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesite/my_game_website/Gaming/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gamesite/my_game_website/Gaming/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesite/my_game_website/Gaming/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gamesite/my_game_website/Gaming/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesite/my_game_website/Gaming/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gamesite/my_game_website/Gaming/templates/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesite/my_game_website/Gaming/templates/welcome.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gamesite/my_game_website/Gaming/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesite/my_game_website/Gaming/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gamesite/my_game_website/Gaming/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesite/my_game_website/Gaming/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gamesite/my_game_website/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesite/my_game_website/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gamesite/my_game_website/my_game_website/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesite/my_game_website/my_game_website/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gamesite/my_game_website/my_game_website/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesite/my_game_website/my_game_website/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +83,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -69,23 +120,36 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;Python.Flappy.executor&quot;: &quot;Run&quot;,
     &quot;Python.baigiamasis.executor&quot;: &quot;Run&quot;,
     &quot;Python.imageadjust.executor&quot;: &quot;Run&quot;,
     &quot;Python.main (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.webscc.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Python/Projectss/pythonProject/Gamesite/my_game_website/media/web/musemuse&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Python\Projectss\pythonProject\Gamesite\my_game_website\media\web\musemuse" />
+      <recent name="E:\Python\Projectss\pythonProject\Gamesite\my_game_website\media\web\Flapper" />
+      <recent name="E:\Python\Projectss\pythonProject\Gamesite\my_game_website\Gaming\media" />
+      <recent name="E:\Python\Projectss\pythonProject\Gamesite\my_game_website\Gaming\templates" />
+      <recent name="E:\Python\Projectss\pythonProject\Gamesite\my_game_website\Gaming\static\web" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Python\Projectss\pythonProject" />
-      <recent name="E:\Python\Projectss\pythonProject\Games\Flappy Bird\img" />
-      <recent name="E:\Python\Projectss\pythonProject\Games\Flappy Bird" />
+      <recent name="E:\Python\Projectss\pythonProject\Gamesite\my_game_website\media\profile_pics" />
+      <recent name="E:\Python\Projectss\pythonProject\Gamesite\my_game_website\Gaming\static\profile_pics" />
+      <recent name="E:\Python\Projectss\pythonProject\Gamesite\my_game_website\Gaming\static" />
+      <recent name="E:\Python\Projectss\pythonProject\Gamesite\my_game_website\Gaming\static\web" />
+      <recent name="E:\Python\Projectss\pythonProject\Gamesite\my_game_website\Gaming\media\web" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main (1)">
+  <component name="RunManager" selected="Python.webscc">
     <configuration name="baigiamasis" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonProject" />
       <option name="ENV_FILES" value="" />
@@ -174,8 +238,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="webscc" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pythonProject" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/webscc.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.webscc" />
         <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.imageadjust" />
@@ -199,6 +286,19 @@
       <option name="presentableId" value="Default" />
       <updated>1712829601140</updated>
     </task>
+    <task id="LOCAL-00001" summary="Flappy Fly">
+      <option name="closed" value="true" />
+      <created>1713430818347</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713430818347</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Flappy Fly" />
+    <option name="LAST_COMMIT_MESSAGE" value="Flappy Fly" />
   </component>
 </project>

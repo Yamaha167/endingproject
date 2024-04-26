@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<style>
+    a, a:hover {
+        display: inline-block;
+        text-decoration: none;
+    }
+    .thumbnail-margin {
+        margin-top: 20px; /* Adjust the value as needed */
+    }
+    img {
+        width: 350px;  /* Adjust as needed */
+        height: auto;
+        border: groove;
+    }
+
+</style>
+<div class="col-sm-8 text-left">
+    {% for game in zaidimai %}
+    <p class="thumbnail-margin">
+        <a href="{% url 'game_detail' slug=game.slug %}">
+            <img src="{{ game.thumbnail.url }}" alt="{{ game.title }}">
+        </a>
+    </p>
+    {% empty %}
+    <p>No games found.</p>
+    {% endfor %}
+</div>
+{% endblock %}
+
+

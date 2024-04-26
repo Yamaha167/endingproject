@@ -1,93 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <style>
-    /* Remove the navbar's default margin-bottom and rounded borders */
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-    }
-
-    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 450px}
-
-    /* Set gray background color and 100% height */
-    .sidenav {
-      padding-top: 20px;
-      background-color: #f1f1f1;
-      height: 100%;
-    }
-
-    /* Set black background color, white text and some padding */
-    footer {
-      background-color: #555;
-      color: white;
-      padding: 15px;
-    }
-
-    /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
-      .sidenav {
-        height: auto;
-        padding: 15px;
-      }
-      .row.content {height:auto;}
-    }
-  </style>
-</head>
-<body>
-
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="{% url 'welcome' %}">GameKata</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="{% url 'welcome' %}">Home</a></li>
-        <li><a href="{% url 'about' %}">About</a></li>
-        <li><a href="{% url 'games' %}">Games</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<div class="container-fluid text-center">
-  <div class="row content">
-    <div class="col-sm-2 sidenav">
-      <p><a href="#">Flappy Fly</a></p>
-      <p><a href="#">Home Invaderz</a></p>
-      <p><a href="#">Hssss</a></p>
-    </div>
-    <div class="col-sm-8 text-left">
-      <h1>Welcome to GameKata!</h1>
-      <p></p>
-      <hr>
-      <p>Geimz for dayz...</p>
-    </div>
-    <div class="col-sm-2 sidenav">
-      </div>
-    </div>
-  </div>
-</div>
-
-<footer class="container-fluid text-center">
-  <p>Footer Text</p>
-</footer>
-
-</body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+    <h1>Welcome to GameKata!</h1>
+    <p style="font-size: 22px; line-height: 1.6; margin-bottom: 20px;">
+        Welcome to the ultimate platform for Pygame enthusiasts! Here, you can easily upload your Pygame creations and dive into a diverse library of games made by developers like you. Our platform, powered by Django, offers a seamless experience for both uploading your games and enjoying countless hours of gameplay.
+    </p>
+    <p style="font-size: 18px; line-height: 1.6;">
+        If you're new or need some guidance, check out our <a href="{% url 'tutorial' %}">tutorial</a> on how to upload your games and navigate the site effectively. Get started today, join our community, and let the games begin! Discover, create, and play with fellow gaming aficionados.
+    </p>
+    <hr>
+    <p style="font-size: 18px; line-height: 1.6; margin-top: 20px;">
+        Games for days...
+    </p>
+{% endblock %}
