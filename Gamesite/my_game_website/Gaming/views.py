@@ -6,16 +6,15 @@ from django.contrib import messages
 from django.views.decorators.csrf import csrf_protect
 from django.contrib.auth.decorators import login_required
 from .models import Game
-from .forms import GameUploadForm, UserUpdateForm, ProfilisUpdateForm
+from .forms import GameUploadForm, UserUpdateForm, ProfilisUpdateForm, CommentForm
 from django.views.generic.edit import CreateView
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 from django.views.generic import TemplateView
 from django.core.paginator import Paginator
 from django.views.generic.detail import DetailView
 from django.shortcuts import get_object_or_404, render
-from django.views.decorators.clickjacking import xframe_options_exempt
-from django.utils.decorators import method_decorator
-from django.views.decorators.cache import never_cache
+from django.views.generic.edit import FormMixin
+
 
 # Create your views here.
 
@@ -24,8 +23,14 @@ from django.http import HttpResponse
 class SuccessView(TemplateView):
     template_name = 'file_upload_success.html'
 
+def flappygame(request):
+    return render(request, 'flappy_game.html')
+
 def welcome(request):
     return render(request, 'welcome.html')
+
+def tutorial(request):
+    return render(request, 'tutorial.html')
 
 def about(request):
     num_users = User.objects.all().count()
@@ -46,11 +51,36 @@ def games(request):
     }
     return render(request, 'games.html', context=context)
 
-def flappygame(request):
-    return render(request, 'flappy_game.html')
+class GameDetailView(FormMixin, DetailView):
+    model = Game
+    #template_name = 'game_detail.html'
+    form_class = CommentForm
+    context_object_name = 'game'
+    def get_template_names(self):
+        game = self.get_object()
+        if game.template_name:
+            return [game.template_name]
 
-def tutorial(request):
-    return render(request, 'tutorial.html')
+    def get_success_url(self):
+        return reverse('game_detail', kwargs={'slug': self.object.slug})
+
+    def post(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        form = self.get_form()
+        if form.is_valid():
+            return self.form_valid(form)
+        else:
+            return self.form_invalid(form)
+
+    def form_valid(self, form):
+        form.instance.game = self.object
+        form.instance.commenter = self.request.user
+        form.save()
+        return super(GameDetailView, self).form_valid(form)
+
+def game_detail(request, slug):
+    game = get_object_or_404(Game, slug=slug)
+    return render(request, f"games/{slug}.html", {'game': game})
 
 class FileUploadView(CreateView):
     model = Game
@@ -67,13 +97,37 @@ class FileUploadView(CreateView):
     def create_game_template(self, game):
         template_path = os.path.join(settings.TEMPLATES[0]['DIRS'][0], f"{game.slug}.html")
 
-        content = (
-            "{% extends 'base.html' %}\n"
-            "{% block content %}\n"
-            "{% load static %}\n"
-            "<iframe src='{{ MEDIA_URL }}web/{{ game.slug }}/index.html' style='width:864px; height:827px; border:none;'></iframe>\n"
-            "{% endblock %}\n"
-        )
+        content = """
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="iframe-container">
+<iframe src='{{ MEDIA_URL }}web/{{ game.slug }}/index.html' style='width:864px; height:827px; border:none;'></iframe>
+</div>
+<h4>Reviews:</h4>
+{% if game.comment_set.all %}
+{% for review in game.comment_set.all %}
+ <hr>
+<strong>{{ review.commenter }}</strong>, <em>{{ review.date_created}}</em>
+<p>{{ review.content }}</p>
+{% endfor %}
+{% else %}
+<p>Game doesn't have any reviews</p>
+{% endif %}
+
+{% if user.is_authenticated %}
+
+<div class='fieldWrapper'>
+    <hr><br/>
+    <h4>Leave a review:</h4>
+    <form action='' method='POST'>{% csrf_token %}
+        {{ form.as_p }}
+        <input type='submit' value='Save'>
+    </form>
+</div>
+{% endif %}
+{% endblock %}
+        """
 
         with open(template_path, 'w') as file:
             file.write(content)
@@ -124,12 +178,4 @@ def register(request):
     return render(request, 'register.html')
 
 
-@method_decorator(xframe_options_exempt, name='dispatch')
-class GameDetailView(DetailView):
-    model = Game
-    #template_name = 'game_detail.html'
-    context_object_name = 'game'
-    def get_template_names(self):
-        game = self.get_object()
-        if game.template_name:
-            return [game.template_name]
+

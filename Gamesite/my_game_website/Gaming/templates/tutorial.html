@@ -2,7 +2,51 @@
 {% block content %}
 <body>
 <h1>Tutorial: How To Package and Upload Your Pygame Project</h1>
-<p>In order to upload the pygame game to our website, you will need the following:</p>
-</body>
+<p>The project is set up to host Python games built with Pygame. To upload your work, you'll need to perform the following steps:</p>
+<ol>
+    <li>Create a game using the Python Pygame library.</li>
+    <li>Package the Pygame game with Pygbag.</li>
+    <li>Create a thumbnail.</li>
+    <li>Upload the files to the website.</li>
+    <li>Enjoy!</li>
+</ol>
 
+<h2>1. Create a Game Using Python Pygame Library</h2>
+<p>Pygame is a set of Python modules designed for writing video games, adding functionality on top of the SDL library. This allows you to create fully featured games and multimedia programs in Python. For more information, visit <a href="https://www.pygame.org/docs/">Pygame Documentation</a>.</p>
+
+<h2>2. Package the Pygame Game with Pygbag</h2>
+<p>Before starting, ensure you have a Pygame app that runs locally. Then, follow these steps:</p>
+<ol>
+    <li>Install Pygbag using the terminal command: <pre class="data-selectable-paragraph">pip install pygbag</pre></li>
+    <li>Rename your main file to <pre class="data-selectable-paragraph">main.py</pre></li>
+    <li>Import asyncio in your main.py: <pre class="data-selectable-paragraph">import asyncio</pre></li>
+    <li>Define your game loop within an async function:
+        <pre class="data-selectable-paragraph">
+import asyncio
+import pygame
+# import other necessary modules
+
+async def main():
+    while True:
+        # Game loop
+        pygame.display.update()
+        await asyncio.sleep(0)
+
+asyncio.run(main())
+        </pre>
+    </li>
+    <li>Change to your project's parent directory and run Pygbag: <pre class="data-selectable-paragraph">pygbag &lt;project name&gt;</pre></li>
+</ol>
+<p>After these steps, find the .apk and index.html files in: <strong> "project_folder_name"/build/web.</strong></p>
+
+<h2>3. Create a Thumbnail</h2>
+<p>Create any PNG image to use as a thumbnail to represent your game on our website.</p>
+
+<h2>4. Upload the Files to the Website</h2>
+<p>After registering and logging in, navigate to the "Upload" page to submit your game and thumbnail.</p>
+
+<h2>5. Enjoy</h2>
+<p>If all steps are followed correctly, your game will be available on the "Games" page!</p>
+
+</body>
 {% endblock %}

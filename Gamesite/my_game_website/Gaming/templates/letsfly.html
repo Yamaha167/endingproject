@@ -1,0 +1,31 @@
+
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="iframe-container">
+<iframe src='{{ MEDIA_URL }}web/{{ game.slug }}/index.html' style='width:864px; height:827px; border:none;'></iframe>
+</div>
+<h4>Reviews:</h4>
+{% if game.comment_set.all %}
+{% for review in game.comment_set.all %}
+ <hr>
+<strong>{{ review.commenter }}</strong>, <em>{{ review.date_created}}</em>
+<p>{{ review.content }}</p>
+{% endfor %}
+{% else %}
+<p>Game doesn't have any reviews</p>
+{% endif %}
+
+{% if user.is_authenticated %}
+
+<div class='fieldWrapper'>
+    <hr><br/>
+    <h4>Leave a review:</h4>
+    <form action='' method='POST'>{% csrf_token %}
+        {{ form.as_p }}
+        <input type='submit' value='Save'>
+    </form>
+</div>
+{% endif %}
+{% endblock %}
+        

@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-from .models import Game, Profilis
+from .models import Game, Profilis, Comment
 
 
 class GameUploadForm(forms.ModelForm):
@@ -20,3 +20,9 @@ class ProfilisUpdateForm(forms.ModelForm):
     class Meta:
         model = Profilis
         fields = ['nuotrauka']
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ('content', 'game', 'commenter')
+        widgets = {'game': forms.HiddenInput(), 'commenter': forms.HiddenInput()}

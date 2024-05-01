@@ -9,43 +9,48 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
     .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
+    margin-bottom: 0;
+    border-radius: 0;
+    z-index: 1;
+  }
+  .iframe-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+  }
+  .fieldWrapper, h4, hr {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+  }
+  .sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    padding-top: 20px;
+    background-color: #f1f1f1;
+  }
+  .left-sidenav { left: 0; }
+  .right-sidenav { right: 0; }
+
+  @media (min-width: 768px) {
+    .main {
+      margin-left: 200px;
+      margin-right: 200px;
     }
+  }
+  @media screen and (max-width: 767px) {
     .sidenav {
-      height: 100%;
-      width: 200px; /* Fixed width */
-      position: fixed; /* Fixed position */
-      padding-top: 20px;
-      background-color: #f1f1f1;
-    }
-    .left-sidenav { left: 0; }
-    .right-sidenav { right: 0; }
-    footer {
-      background-color: #555;
-      color: white;
-      padding: 15px;
-      position: absolute;
-      bottom: 0;
+      position: relative;
+      height: auto;
       width: 100%;
+      padding: 15px;
     }
-    @media (min-width: 768px) {
-      .main {
-        margin-left: 200px; /* Space for left sidebar */
-        margin-right: 200px; /* Space for right sidebar */
-      }
+    .main {
+      margin: 0;
     }
-    @media screen and (max-width: 767px) {
-      .sidenav {
-        position: relative;
-        height: auto;
-        width: 100%;
-        padding: 15px;
-      }
-      .main {
-        margin: 0;
-      }
-    }
+  }
   </style>
 </head>
 <body>
@@ -62,11 +67,18 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
+        {% if user.is_authenticated %}
         <li><a href="{% url 'welcome' %}">Home</a></li>
         <li><a href="{% url 'about' %}">About/Stats</a></li>
         <li><a href="{% url 'games' %}">Games</a></li>
         <li><a href="{% url 'tutorial' %}">Tutorial</a></li>
         <li><a href="{% url 'file_upload' %}">Upload</a></li>
+        {% else %}
+        <li><a href="{% url 'welcome' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About/Stats</a></li>
+        <li><a href="{% url 'games' %}">Games</a></li>
+        <li><a href="{% url 'tutorial' %}">Tutorial</a></li>
+        {% endif %}
       </ul>
       {% if user.is_authenticated %}
         <ul class="nav navbar-nav navbar-right">
@@ -103,16 +115,9 @@
       {% endblock %}
     </div>
     <div class="col-sm-2 sidenav right-sidenav">
-      <p><a href="{% url 'flappy_game' %}">Flappy Fly</a></p>
-      <p><a href="#">Home Invaderz</a></p>
-      <p><a href="#">Hssss</a></p>
     </div>
   </div>
 </div>
-
-<footer class="container-fluid text-center">
-  <p>Footer Text</p>
-</footer>
 
 </body>
 </html>
