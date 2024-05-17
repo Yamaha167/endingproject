@@ -33,6 +33,7 @@ Follow these steps to set up the project:
 Create a new account by registering on the website.
 
 2. **Upload a Game:**
+- Navigate to the Tutorial page and package the game with Pygbag according to the instructions. 
 - Navigate to the upload page.
 - Fill in the required fields (APK, Index.html, and thumbnail image).
 - Submit your game.
